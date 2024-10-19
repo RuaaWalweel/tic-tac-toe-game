@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    width: 500px;
+    height: 3px;
+    background: black;
+}
+
+/* Board container */
+#board {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    transition: all 0.3s ease;
+}
+
+/* Tiles inside the board */
+.tile {
+    width: 147px;
+    height: 147px;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tile:hover {
+    background-color: #f0f0f0;
+}
+
+/* Add horizontal and vertical lines */
+.horizontal-line {
+    border-bottom: 3px solid black;
+}
+
+.vertical-line {
+    border-right: 3px solid black;
+}
+
+/* Style for winning tiles */
+.winner {
+    background-color: lightgreen;
+    color: red;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 500px) {
+    #board {
+        width: 300px;
+        height: 300px;
+    }
+
+    .tile {
+        width: 98px;
+        height: 98px;
+        font-size: 70px;
+    }
+}
